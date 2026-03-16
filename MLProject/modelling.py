@@ -3,7 +3,7 @@ import numpy as np
 import mlflow
 import mlflow.sklearn
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report
 import os
 
 # Script basic training buat nyoba-nyoba awal (autolog)
