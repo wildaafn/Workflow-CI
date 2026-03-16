@@ -1,0 +1,12 @@
+digest: b510064a
+name: dataset
+profile: '{"num_rows": 2979, "num_elements": 20853}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "Area", "required": true},
+  {"type": "double", "name": "Perimeter", "required": true}, {"type": "double", "name":
+  "Major_Axis_Length", "required": true}, {"type": "double", "name": "Minor_Axis_Length",
+  "required": true}, {"type": "double", "name": "Eccentricity", "required": true},
+  {"type": "double", "name": "Convex_Area", "required": true}, {"type": "double",
+  "name": "Extent", "required": true}]}'
+source: '{"tags": {"mlflow.user": "wildaafn", "mlflow.source.name": "modelling.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code

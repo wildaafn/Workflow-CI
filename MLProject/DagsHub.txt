@@ -1,0 +1,7 @@
+Link Tracking Online MLflow (DagsHub):
+https://dagshub.com/wildaafn/Membangun_model
+
+Username: wildaafn
+Project: Membangun_model
+
+Saya pakai DagsHub supaya artefak model bisa diakses secara online sesuai syarat Advanced.

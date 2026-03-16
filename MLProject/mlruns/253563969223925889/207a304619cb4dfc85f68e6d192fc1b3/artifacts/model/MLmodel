@@ -1,0 +1,29 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.6
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 2.19.0
+model_size_bytes: 2844694
+model_uuid: 24ede319b6794289a40fa1a946c201b3
+run_id: 207a304619cb4dfc85f68e6d192fc1b3
+signature:
+  inputs: '[{"type": "double", "name": "Area", "required": true}, {"type": "double",
+    "name": "Perimeter", "required": true}, {"type": "double", "name": "Major_Axis_Length",
+    "required": true}, {"type": "double", "name": "Minor_Axis_Length", "required":
+    true}, {"type": "double", "name": "Eccentricity", "required": true}, {"type":
+    "double", "name": "Convex_Area", "required": true}, {"type": "double", "name":
+    "Extent", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2026-03-16 21:22:24.720727'
