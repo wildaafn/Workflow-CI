@@ -78,11 +78,11 @@ jobs:
           # Build docker image
           mlflow models build-docker \
             -m "mlruns/0/$LATEST_RUN/artifacts/model" \
-            -n "wine-quality-model" \
+            -n "rice-quality-model" \
             --enable-mlserver
 
       # Step 10: Tag dan Push Docker image
       - name: Push Docker Image
         run: |
-          docker tag wine-quality-model ${{ secrets.DOCKER_USERNAME }}/wine-quality-model:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/wine-quality-model:latest
+            docker tag rice-quality-model ${{ secrets.DOCKER_USERNAME }}/rice-quality-model:latest
+            docker push ${{ secrets.DOCKER_USERNAME }}/rice-quality-model:latest
