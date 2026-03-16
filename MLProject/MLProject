@@ -1,4 +1,4 @@
-name: wine_quality_classification
+name: rice_classification
 
 conda_env: conda.yaml
 

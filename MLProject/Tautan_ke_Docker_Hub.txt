@@ -1,1 +1,1 @@
-Tautan Docker Hub: https://hub.docker.com/r/wildaafn/wine-quality-model
+Tautan Docker Hub: https://hub.docker.com/r/wildaafn/rice-quality-model
