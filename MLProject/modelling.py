@@ -33,7 +33,7 @@ def train_model():
     # Autologging
     mlflow.sklearn.autolog()
 
-    with mlflow.start_run(run_name="RandomForest_Autolog"):
+    with mlflow.start_run(run_name="RandomForest_Autolog", nested=True):
         rf = RandomForestClassifier(n_estimators=100, random_state=42)
         rf.fit(X_train, y_train)
         
