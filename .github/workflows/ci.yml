@@ -6,28 +6,28 @@ on:
   workflow_dispatch:
 
 jobs:
-  train-and-deploy:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      # Step 1: Checkout repository
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # Step 1: Run actions/checkout@v3
+      - name: Run actions/checkout@v3
+        uses: actions/checkout@v3
 
-      # Step 2: Setup Python
-      - name: Setup Python
+      # Step 2: Set up Python 3.12.7
+      - name: Set up Python 3.12.7
         uses: actions/setup-python@v5
         with:
           python-version: '3.12.7'
 
-      # Step 3: Setup Miniconda
-      - name: Setup Miniconda
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          auto-update-conda: true
-          python-version: '3.12.7'
+      # Step 3: Check Env
+      - name: Check Env
+        run: |
+          python --version
+          pip --version
+
 
       # Step 4: Install Dependencies
       - name: Install dependencies
@@ -35,8 +35,8 @@ jobs:
           pip install mlflow==2.19.0 dagshub
           pip install pandas numpy scikit-learn matplotlib seaborn
 
-      # Step 5: Run MLflow Project
-      - name: Run MLflow Project
+      # Step 5: Run mlflow project
+      - name: Run mlflow project
         working-directory: MLProject
         env:
           MLFLOW_TRACKING_URI: "https://dagshub.com/wildaafn/Membangun_model.mlflow"
