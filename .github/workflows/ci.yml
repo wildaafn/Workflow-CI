@@ -29,15 +29,19 @@ jobs:
           auto-update-conda: true
           python-version: '3.12.7'
 
-      # Step 4: Install MLflow
-      - name: Install MLflow and dependencies
+      # Step 4: Install Dependencies
+      - name: Install dependencies
         run: |
-          pip install mlflow==2.19.0
+          pip install mlflow==2.19.0 dagshub
           pip install pandas numpy scikit-learn matplotlib seaborn
 
       # Step 5: Run MLflow Project
       - name: Run MLflow Project
         working-directory: MLProject
+        env:
+          MLFLOW_TRACKING_URI: "https://dagshub.com/wildaafn/Membangun_model.mlflow"
+          MLFLOW_TRACKING_USERNAME: "wildaafn"
+          MLFLOW_TRACKING_PASSWORD: ${{ secrets.DAGSHUB_TOKEN }}
         run: |
           mlflow run . --env-manager=local
 
